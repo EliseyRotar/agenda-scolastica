@@ -1,0 +1,104 @@
++--------------------------------------------------+
+|              <<abstract>>                        |
+|                 Compito                          |
++--------------------------------------------------+
+| - id: int                                        |
+| - descrizione: String                            |
+| - data: LocalDate                                |
+| - materia: Materia                               |
+| - completato: boolean                            |
+| - prossimoId: int  {static}                      |
++--------------------------------------------------+
+| + Compito(descrizione, data, materia)            |
+| + getId(): int                                   |
+| + getDescrizione(): String                       |
+| + setDescrizione(String): void                   |
+| + getData(): LocalDate                           |
+| + setData(LocalDate): void                       |
+| + getMateria(): Materia                          |
+| + setMateria(Materia): void                      |
+| + isCompletato(): boolean                        |
+| + setCompletato(boolean): void                   |
+| + getTipo(): String  {abstract}                  |
+| + toString(): String                             |
++--------------------------------------------------+
+          ^               ^               ^
+          |               |               |
++---------+----+  +-------+------+  +-----+--------+
+|   Verifica   |  | Interrogazione|  |   Consegna   |
++--------------+  +---------------+  +--------------+
+| - argomenti  |  | - argomento   |  | - dettagli   |
+| - voto:Double|  | - voto:Double |  |   :String    |
++--------------+  +---------------+  +--------------+
+| + getArgomenti|  | + getArgomento|  | + getDettagli|
+| + setArgomenti|  | + setArgomento|  | + setDettagli|
+| + getVoto()  |  | + getVoto()   |  +--------------+
+| + setVoto()  |  | + setVoto()   |  | + getTipo()  |
+| + getTipo()  |  | + getTipo()   |  | + toString() |
+| + toString() |  | + toString()  |  +--------------+
++--------------+  +---------------+
+
++--------------------------------------------------+
+|               <<enum>>                           |
+|                Materia                           |
++--------------------------------------------------+
+| ITALIANO, MATEMATICA, INGLESE, STORIA,           |
+| INFORMATICA, SCIENZE, FISICA,                    |
+| EDUCAZIONE_FISICA, ARTE, RELIGIONE               |
++--------------------------------------------------+
+
++--------------------------------------------------+
+|                  Agenda                          |
++--------------------------------------------------+
+| - compiti: ArrayList<Compito>                    |
++--------------------------------------------------+
+| + Agenda()                                       |
+| + aggiungiCompito(Compito): void                 |
+| + rimuoviCompito(int): boolean                   |
+| + cercaCompitoPerId(int): Compito                |
+| + cercaCompitiPerMateria(Materia): ArrayList     |
+| + cercaCompitiPerData(LocalDate): ArrayList      |
+| + mostraTuttiCompiti(): void                     |
+| + mostraCompitiPerMateria(): void                |
+| + mostraCompitiImminenti(int): void              |
+| + ordinaPerData(): void                          |
+| + calcolaMediaVoti(): double                     |
+| + getTotaleCompiti(): int                        |
+| + getCompitiCompletati(): int                    |
++--------------------------------------------------+
+          |
+          | usa (ArrayList<Compito>)
+          v
+     [Compito e sottoclassi]
+
++--------------------------------------------------+
+|                   Main                           |
++--------------------------------------------------+
+| - scanner: Scanner  {static}                     |
+| - agenda: Agenda    {static}                     |
++--------------------------------------------------+
+| + main(String[]): void                           |
+| - mostraMenu(): void                             |
+| - gestisciScelta(int): boolean                   |
+| - aggiungiCompito(): void                        |
+| - cercaPerId(): void                             |
+| - cercaPerMateria(): void                        |
+| - segnaCompletato(): void                        |
+| - rimuoviCompito(): void                         |
+| - mostraImminenti(): void                        |
+| - mostraStatistiche(): void                      |
+| - inserisciVoto(): void                          |
+| - modificaDescrizione(): void                    |
++--------------------------------------------------+
+          |
+          | usa
+          v
+       [Agenda]
+
+RELAZIONI:
+  Verifica       --|>  Compito   (ereditarieta)
+  Interrogazione --|>  Compito   (ereditarieta)
+  Consegna       --|>  Compito   (ereditarieta)
+  Agenda          o--  Compito   (composizione, ArrayList)
+  Main            -->  Agenda    (associazione)
+  Compito         -->  Materia   (associazione, enum)

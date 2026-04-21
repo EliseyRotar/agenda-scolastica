@@ -1,0 +1,27 @@
+-------------------------
+
+
+1. Perché hai scelto ArrayList?
+   → È semplice da usare e capire
+   → Permette di fare tutte le operazioni necessarie
+
+2. Come funziona l'ereditarietà nel progetto?
+   → Compito è astratta, Verifica/Interrogazione/Consegna la estendono
+   → getTipo() è astratto e implementato diversamente
+
+3. Dove usi il polimorfismo?
+   → L'ArrayList contiene Compito ma oggetti delle sottoclassi
+   → Il metodo calcolaMediaVoti usa instanceof per il cast
+
+4. Come gestisci le eccezioni?
+   → try/catch per NumberFormatException, DateTimeParseException
+   → Messaggi chiari all'utente
+
+5. Quali operazioni sui dati hai implementato?
+   → Ricerche (per ID, materia)
+   → Filtri (imminenti)
+   → Statistiche (conteggi, media voti)
+
+
+-------------------------
+

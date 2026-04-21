@@ -1,0 +1,60 @@
+Progetto: Agenda Scolastica
+Studente: Rotar Elisey
+Classe: 4BI
+
+
+DETTAGLIO ORE
+-------------
+
+Data: 07/04/2026
+Attività: Analisi requisiti e scelta tema
+Ore: 1h
+Note: Valutazione idee progetto, scelta agenda scolastica
+
+Data: 08/04/2026
+Attività: Progettazione iniziale
+Ore: 1.5h
+Note: Definizione classi base, prima bozza gerarchia
+
+Data: 10/04/2026
+Attività: Implementazione classi modello
+Ore: 2h
+Note: Compito, Verifica, Interrogazione, Consegna
+
+Data: 12/04/2026
+Attività: Implementazione enum e test base
+Ore: 1h
+Note: Materia enum, primi test compilazione
+
+Data: 14/04/2026
+Attività: Implementazione classe Agenda
+Ore: 2h
+Note: Metodi CRUD, gestione ArrayList
+
+Data: 16/04/2026
+Attività: Ricerche e filtri
+Ore: 1h
+Note: Metodi ricerca per materia, statistiche
+
+Data: 17/04/2026
+Attività: Implementazione Main e menu
+Ore: 1.5h
+Note: Menu interattivo, gestione input utente
+
+Data: 19/04/2026
+Attività: Gestione eccezioni e validazione
+Ore: 1h
+Note: Try/catch/throw, messaggi errore
+
+Data: 20/04/2026
+Attività: Testing completo
+Ore: 1h
+Note: Test funzionalità, correzione bug
+
+Data: 21/04/2026
+Attività: Documentazione finale
+Ore: 1h
+Note: Relazione, README, diagramma UML
+
+
+TOTALE ORE: 13.5 ore
